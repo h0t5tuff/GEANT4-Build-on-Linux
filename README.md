@@ -1,4 +1,4 @@
-1. move the two scripts in this repo (build_geant4_linux.sh and uninstall_geant4_linux.sh) to your home directory.
+1. move the two scripts in this repo to your home directory.
 
 2. open .zshrc/.bashrc file in your home directory and comment out any Geant4 related lines.
 
@@ -37,15 +37,6 @@ Build
 
 >mkdir build && cd build
 
-on mac
-
->// rm -rf build && mkdir build && cd build // if you wanna rebuild
->
->cmake .. -DCMAKE_BUILD_TYPE=Release -DGeant4_DIR="$HOME/geant4/install/lib/cmake/Geant4" -DCMAKE_PREFIX_PATH="$(brew --prefix root):$HOME/geant4/install/lib/cmake/Geant4"
->
->// make clean //if you wanna remake
->
->make -j$(sysctl -n hw.ncpu)
 
 on linux
 
